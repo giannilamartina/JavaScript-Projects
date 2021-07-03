@@ -15,7 +15,7 @@ app.listen(8800, () => {
     console.log('Example app listening on port 8800!');
 });
 
-const serverClient = new StreamChat('<STREAM_API_KEY>', '<STREAM_API_SECRET>');
+const serverClient = new StreamChat(jy78dd3ys65b, vzepaz7spqt3q2mynvm5b8rchfhvxksfa5utcadamrv7ump4tbh3tfxadydwb2ys);
 
 app.get('/token', (req, res) => {
     const { username } = req.query;
