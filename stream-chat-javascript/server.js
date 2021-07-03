@@ -14,3 +14,15 @@ app.get('/', (req, res) => {
 app.listen(8800, () => {
     console.log('Example app listening on port 8800!');
 });
+
+const serverClient = new StreamChat('<STREAM_API_KEY>', '<STREAM_API_SECRET>');
+
+app.get('/token', (req, res) => {
+    const { username } = req.query;
+    if (username) {
+        const token = serverClient.createToken(username);
+        res.status(200).json({ token, status: 'success' });
+    } else {
+        res.status(401).json({ message: 'invalid request', status: 'error'});
+    }
+});
