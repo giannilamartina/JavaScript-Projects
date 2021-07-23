@@ -14,8 +14,16 @@ section {
     scroll-snap-align: start;
 }
 
+.card {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
 .container {
-    scroll-snap-type: y proximity; /* proximity for snapping when close to edge, mandatory for smoother transitions */
+    scroll-snap-type: y mandatory; /* proximity for snapping when close to edge, mandatory for smoother transitions */
     overflow-y: scroll;
     height: 100vh;
 }
